@@ -6,7 +6,7 @@ import Layout from './components/Layout'
 import NuevoCliente, {
 	action as nuevoClienteAction,
 } from './pages/NuevoCliente'
-import Index, { loader as clientesLoader, loader } from './pages/Index'
+import Index, { loader as clientesLoader} from './pages/Index'
 import ErrorPage from './components/ErrorPage'
 import EditarCliente, {
 	loader as editarClienteLoader,

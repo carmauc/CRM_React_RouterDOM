@@ -34,7 +34,9 @@ export async function action({ request, params }) {
 	}
 
 	// Validar 1 solo campo email
-	let regex = new RegExp(
+	// eslint-disable-next-line prefer-regex-literals
+	const regex = new RegExp(
+		// eslint-disable-next-line no-control-regex
 		"([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|\"([]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|[[\t -Z^-~]*])"
 	)
 	if (!regex.test(email)) {

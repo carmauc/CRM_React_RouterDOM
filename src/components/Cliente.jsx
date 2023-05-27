@@ -1,4 +1,3 @@
-import React from 'react'
 import { Form, useNavigate, redirect } from 'react-router-dom'
 import { eliminarCliente } from '../data/clientes'
 

@@ -1,4 +1,4 @@
-import React from 'react'
+/* eslint-disable prefer-regex-literals */
 import { useNavigate, Form, useActionData, redirect } from 'react-router-dom'
 import Formulario from '../components/Formulario'
 import Error from '../components/Error'
@@ -15,7 +15,8 @@ export async function action({ request }) {
 	}
 
 	// Validar 1 solo campo email
-	let regex = new RegExp(
+	const regex = new RegExp(
+		// eslint-disable-next-line no-control-regex
 		"([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|\"([]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|[[\t -Z^-~]*])"
 	)
 	if (!regex.test(email)) {
